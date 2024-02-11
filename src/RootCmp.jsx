@@ -1,12 +1,26 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router'
-import 'animate.css';
 import { HomePage } from './views/HomePage';
+import { setScreenSize } from './store/actions/app.actions'
+import 'animate.css';
 
 
 
 export function RootCmp() {
 
+
+    useEffect(() => {
+        handleScreenResize()
+        window.addEventListener('resize', handleScreenResize)
+
+        return () => {
+            window.removeEventListener('resize', handleScreenResize)
+        }
+    }, [])
+
+    function handleScreenResize() {
+        setScreenSize(window.innerWidth)
+    }
 
     return (
         <section className="app">

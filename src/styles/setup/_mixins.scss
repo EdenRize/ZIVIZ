@@ -1,43 +1,30 @@
 /* Breakpoint mixins */
 
-//393px +
+//500px +
 @mixin for-mobile-layout {
     @media (min-width: $mobile-breakpoint) {
         @content;
     }
 }
 
-//640px +
-@mixin for-table-layout {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-    }
-}
-
-//768px +
+//630px +
 @mixin for-narrow-layout {
     @media (min-width: $narrow-breakpoint) {
         @content;
     }
 }
 
-//1024px +
-@mixin for-wide-layout {
-    @media (min-width: $wide-breakpoint) {
+//768px +
+@mixin for-tablet-layout {
+    @media (min-width: $tablet-breakpoint) {
         @content;
     }
 }
 
-//1280px +
+
+//1024px +
 @mixin for-desktop-layout {
     @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
-}
-
-//1536px +
-@mixin for-full-layout {
-    @media (min-width: $full-breakpoint) {
         @content;
     }
 }

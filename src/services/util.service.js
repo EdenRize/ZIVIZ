@@ -5,7 +5,8 @@ export const utilService = {
     getRandomInt,
     debounce,
     saveToStorage,
-    loadFromStorage
+    loadFromStorage,
+    getScreenSize
 }
 
 function readJsonFile(path) {
@@ -59,4 +60,17 @@ function loadFromStorage(key) {
     return (data) ? JSON.parse(data) : undefined
 }
 
+function getScreenSize(screenSize) {
 
+    if (screenSize < 500) {
+        return 'mobile'
+    } else if (screenSize >= 500 && screenSize < 630) {
+        return 'mid-narrow'
+    } else if (screenSize >= 630 && screenSize < 768) {
+        return 'narrow'
+    } else if (screenSize >= 768 && screenSize < 1024) {
+        return 'tablet'
+    } else {
+        return 'desktop'
+    }
+}
