@@ -9,11 +9,36 @@
         h1 {
             font-size: 3rem;
             margin-block-end: 3px;
+
+            @include for-narrow-layout {
+                font-size: 3.5rem;
+            }
+
+            @include for-desktop-layout {
+                font-size: 4rem;
+            }
+
+            @include for-large-layout {
+                font-size: calc(10px + 4.5vw);
+            }
         }
 
         h2 {
             font-size: 1.1rem;
             letter-spacing: 0.05rem;
+
+
+            @include for-narrow-layout {
+                font-size: 1.6rem;
+            }
+
+            @include for-desktop-layout {
+                font-size: 2.1rem;
+            }
+
+            @include for-large-layout {
+                font-size: calc(10px + 1.8vw);
+            }
         }
     }
 
@@ -26,12 +51,50 @@
             top: -68px;
             right: -67px;
             width: 250px;
+
+            @include for-narrow-layout {
+                width: 300px;
+            }
+
+            @include for-tablet-layout {
+                width: 330px;
+            }
+
+            @include for-desktop-layout {
+                top: -55px;
+                right: -55px;
+                width: 370px;
+            }
+
+            @include for-large-layout {
+                width: 20%;
+                max-width: 600px;
+            }
         }
 
         &.flowers {
             bottom: -82px;
             left: -23px;
             width: 200px;
+
+            @include for-narrow-layout {
+                width: 250px;
+            }
+
+            @include for-tablet-layout {
+                bottom: -100px;
+                width: 280px;
+            }
+
+            @include for-desktop-layout {
+                left: -10px;
+                width: 300px;
+            }
+
+            @include for-large-layout {
+                width: 15%;
+                max-width: 450px;
+            }
         }
     }
 }

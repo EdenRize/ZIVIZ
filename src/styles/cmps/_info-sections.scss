@@ -1,0 +1,157 @@
+.info-sections {
+
+    .section {
+
+        img {
+            position: absolute;
+            top: 67%;
+            left: 0;
+            translate: 0 -67%;
+            width: 250px;
+
+            @include for-mobile-layout {
+                width: 365px;
+            }
+
+            @include for-tablet-layout {
+                width: 400px;
+            }
+
+            @include for-large-layout {
+                width: 35%;
+                left: 150px;
+            }
+        }
+
+
+        p {
+            position: absolute;
+            top: 48%;
+            right: 5px;
+            translate: 0 -48%;
+
+            max-width: 300px;
+            letter-spacing: 0.03rem;
+
+            @include for-mobile-layout {
+                max-width: 400px;
+                font-size: 1.1rem;
+            }
+
+            @include for-narrow-layout {
+                font-size: 1.3rem;
+            }
+
+            @include for-tablet-layout {
+                max-width: 550px;
+            }
+
+            @include for-desktop-layout {
+                font-size: 1.8rem;
+            }
+
+
+            @include for-large-layout {
+                font-size: calc(10px + 1.5vw);
+            }
+        }
+
+        &.even {
+
+            img {
+                left: unset;
+                right: -30px;
+                translate: 0 -67%;
+
+                @include for-tablet-layout {
+                    right: -20px;
+                }
+
+                @include for-large-layout {
+                    right: 30px;
+                }
+            }
+
+            p {
+                right: unset;
+                left: 30%;
+                translate: -30% -48%;
+            }
+        }
+
+        &.gallery-section {
+
+            p {
+                top: 54%;
+                right: 5px;
+                translate: 0 -54%;
+                max-width: 174px;
+
+                @include for-mobile-layout {
+                    max-width: 222px;
+                }
+
+                @include for-narrow-layout {
+                    max-width: 330px;
+                }
+
+                @include for-tablet-layout {
+                    right: 20px;
+                    max-width: 450px;
+                }
+
+                @include for-desktop-layout {
+                    right: 50px;
+                    max-width: 550px;
+                }
+
+                @include for-large-layout {
+                    right: 20%;
+                    translate: 20% -54%;
+                }
+            }
+
+            img {
+                top: 55%;
+                translate: 0 -55%;
+
+                @include for-large-layout {
+                    width: 30%;
+                }
+            }
+        }
+
+        &.contact-section {
+
+            p {
+                top: 45%;
+                translate: -30% -45%;
+                max-width: 222px;
+
+                @include for-mobile-layout {
+                    max-width: 300px;
+                }
+
+                @include for-narrow-layout {
+                    max-width: 350px;
+                }
+            }
+
+            img {
+                right: 3px;
+                top: 72%;
+                translate: 0 -72%;
+                width: 165px;
+
+                @include for-mobile-layout {
+                    width: 200px;
+                }
+
+                @include for-narrow-layout {
+                    width: 250px;
+                }
+            }
+
+        }
+    }
+}

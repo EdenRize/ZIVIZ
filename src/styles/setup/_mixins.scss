@@ -29,6 +29,13 @@
     }
 }
 
+//1200px +
+@mixin for-large-layout {
+    @media (min-width: $large-breakpoint) {
+        @content;
+    }
+}
+
 /* Media  Mixins */
 @mixin aspect-ratio($width, $height) {
     position: relative;
