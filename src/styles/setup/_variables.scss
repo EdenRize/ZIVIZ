@@ -1,0 +1,48 @@
+//colors
+$main-clr: #FFF2E1;
+$font-clr1: #000000;
+$secondary-clr: #D60001;
+
+:root {
+    //paddings
+    --padding-inline: 2.5rem;
+}
+
+
+// Breakpoints
+$mobile-breakpoint: 393px;
+$tablet-breakpoint: 640px;
+$narrow-breakpoint: 768px;
+$wide-breakpoint: 1024px;
+$desktop-breakpoint: 1280px;
+$full-breakpoint: 1536px;
+
+@media (min-width: $mobile-breakpoint) {
+    :root {
+        --padding-inline: 3rem;
+    }
+}
+
+@media (min-width: $tablet-breakpoint) {
+    :root {
+        --padding-inline: 7rem;
+    }
+}
+
+@media (min-width: $narrow-breakpoint) {
+    :root {
+        --padding-inline: 8rem;
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    :root {
+        --padding-inline: 10rem;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    :root {
+        --padding-inline: 11rem;
+    }
+}

@@ -1,0 +1,39 @@
+.hero {
+
+    .title-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+
+        h1 {
+            font-size: 3rem;
+            margin-block-end: 3px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+        }
+    }
+
+    .hero-img {
+        position: absolute;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+
+        &.women {
+            top: -68px;
+            right: -67px;
+            width: 250px;
+        }
+
+        &.flowers {
+            bottom: -93px;
+            left: -23px;
+            width: 200px;
+        }
+    }
+}
+
+@include fadeIn;
