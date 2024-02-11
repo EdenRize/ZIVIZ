@@ -1,0 +1,38 @@
+.sections-list {
+
+    .section {
+
+        img {
+            position: absolute;
+            width: 250px;
+            top: 67%;
+            left: 0;
+            translate: 0 -67%;
+        }
+
+
+        p {
+            position: absolute;
+            top: 48%;
+            right: 5px;
+            translate: 0 -48%;
+            max-width: 300px;
+        }
+
+        &.even {
+
+            img {
+                left: unset;
+                right: -30px;
+                translate: 0 -67%;
+            }
+
+            p {
+                right: unset;
+                left: 30%;
+                translate: -30% -48%;
+            }
+        }
+
+    }
+}
