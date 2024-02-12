@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { GalleryList } from "../cmps/GalleryList";
 import { Logo } from "../cmps/Logo";
 
@@ -18,12 +19,23 @@ export function Gallery() {
         '/img/women-cry-sun.png',
         '/img/women-drink.png',
         '/img/women-sun.png',
+        '/img/flowers-2.png',
+        '/img/flower-face.png',
+        '/img/leaves-squares.png',
+        '/img/girl-bat.png',
+        '/img/girl-skate.png',
+        '/img/kid-fish.png',
+        '/img/girl-fall.png',
+        '/img/sumo.png',
+        '/img/circle-head.png',
+        '/img/women-flower-chick.png',
     ]
 
     return (
         <section className="gallery">
             <header>
-                <h1 className="ltr"> <Logo />'s Gallery</h1>
+                <h1 className="ltr"><Link to="/"><Logo /></Link>'s Gallery</h1>
+                <Link to="/"><img className="back-arrow" src="/img/back.svg" /></Link>
             </header>
             <GalleryList imgUrls={imgUrls} />
         </section>

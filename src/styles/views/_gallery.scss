@@ -1,42 +1,94 @@
 .gallery {
     overflow-x: hidden;
 
-    h1 {
-        letter-spacing: 0.05rem;
-        text-align: center;
-        margin-block: 20px;
-        font-size: 2.2rem;
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $main-clr;
 
-        @include for-tablet-layout {
-            margin-block: 30px;
-            font-size: 2.5rem;
+        h1 {
+            letter-spacing: 0.05rem;
+            text-align: center;
+            padding-block: 20px;
+            font-size: 2.2rem;
+
+            @include for-tablet-layout {
+                padding-block: 30px;
+                font-size: 2.5rem;
+
+                .logo {
+                    font-size: 2.4rem !important;
+                }
+            }
+
+            @include for-desktop-layout {
+                padding-block-end: 40px;
+                font-size: 3.1rem;
+
+                .logo {
+                    font-size: 3rem !important;
+                }
+            }
+
+            @include for-large-layout {
+                padding-block-end: 50px;
+                font-size: 3.5rem;
+
+                .logo {
+                    font-size: 3.4rem !important;
+                }
+            }
 
             .logo {
-                font-size: 2.4rem !important;
+                display: inline-block;
+                font-size: 2.1rem;
             }
+        }
+
+        .back-arrow {
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            width: 25px;
+
+            @include for-mobile-layout {
+                left: 10px;
+                width: 30px;
+            }
+
+            @include for-narrow-layout {
+                width: 35px;
+
+                &:hover {
+                    filter: brightness(85%);
+                }
+            }
+
+            @include for-desktop-layout {
+                width: 40px;
+                left: 15px;
+            }
+
+            @include for-large-layout {
+                left: 25px;
+            }
+        }
+    }
+
+    .gallery-list {
+        margin-top: 95px;
+
+        @include for-tablet-layout {
+            margin-top: 121px;
         }
 
         @include for-desktop-layout {
-            margin-block-end: 40px;
-            font-size: 3.1rem;
-
-            .logo {
-                font-size: 3rem !important;
-            }
+            margin-top: 142px;
         }
 
         @include for-large-layout {
-            margin-block-end: 50px;
-            font-size: 3.5rem;
-
-            .logo {
-                font-size: 3.4rem !important;
-            }
-        }
-
-        .logo {
-            display: inline-block;
-            font-size: 2.1rem;
+            margin-top: 161px;
         }
     }
 }
