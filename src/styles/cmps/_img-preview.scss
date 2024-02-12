@@ -1,0 +1,38 @@
+.img-preview {
+    position: fixed;
+    inset: 0;
+
+    .black-screen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #6161616f;
+    }
+
+    .img-container {
+        background-color: $main-clr;
+        padding: 20px;
+        border-radius: 4px;
+        max-height: 70%;
+        opacity: 0;
+        z-index: 1;
+
+        &.loaded {
+            opacity: 1;
+        }
+
+        img {
+            width: 220px;
+            max-height: 80%;
+
+            @include for-tablet-layout {
+                width: 250px;
+            }
+
+            @include for-large-layout {
+                width: 300px;
+            }
+        }
+    }
+
+}
