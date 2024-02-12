@@ -169,18 +169,13 @@
                     width: 250px;
                 }
 
-                @include for-tablet-layout {
-                    right: 10%;
-                    translate: 10% -72%;
-                }
-
                 @include for-desktop-layout {
                     width: 290px;
                 }
 
                 @include for-large-layout {
-                    right: 15%;
-                    translate: 15% -72%;
+                    right: 10%;
+                    translate: 10% -72%;
                     width: 20%;
                 }
             }
