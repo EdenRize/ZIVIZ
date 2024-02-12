@@ -30,28 +30,32 @@
             right: 5px;
             translate: 0 -48%;
 
-            max-width: 300px;
+            max-width: 220px;
+            font-size: 1.1rem;
             letter-spacing: 0.03rem;
 
             @include for-mobile-layout {
-                max-width: 400px;
-                font-size: 1.1rem;
-            }
-
-            @include for-narrow-layout {
+                max-width: 250px;
                 font-size: 1.3rem;
             }
 
+            @include for-narrow-layout {
+                max-width: 350px;
+                font-size: 1.5rem;
+            }
+
             @include for-tablet-layout {
-                max-width: 550px;
+                max-width: 420px;
             }
 
             @include for-desktop-layout {
+                max-width: 600px;
                 font-size: 1.8rem;
             }
 
 
             @include for-large-layout {
+                max-width: 750px;
                 font-size: calc(10px + 1.5vw);
             }
         }
@@ -74,8 +78,8 @@
 
             p {
                 right: unset;
-                left: 30%;
-                translate: -30% -48%;
+                left: 20%;
+                translate: -20% -48%;
             }
         }
 
@@ -83,9 +87,9 @@
 
             p {
                 top: 54%;
-                right: 5px;
+                right: 15px;
                 translate: 0 -54%;
-                max-width: 174px;
+                max-width: 150px;
 
                 @include for-mobile-layout {
                     max-width: 222px;
@@ -108,6 +112,7 @@
                 @include for-large-layout {
                     right: 20%;
                     translate: 20% -54%;
+                    max-width: 750px;
                 }
             }
 
@@ -125,7 +130,8 @@
 
             p {
                 top: 45%;
-                translate: -30% -45%;
+                left: 10%;
+                translate: -10% -45%;
                 max-width: 222px;
 
                 @include for-mobile-layout {
@@ -134,6 +140,18 @@
 
                 @include for-narrow-layout {
                     max-width: 350px;
+                }
+
+                @include for-tablet-layout {
+                    max-width: 450px;
+                }
+
+                @include for-desktop-layout {
+                    max-width: 600px;
+                }
+
+                @include for-large-layout {
+                    max-width: 750px;
                 }
             }
 
@@ -149,6 +167,21 @@
 
                 @include for-narrow-layout {
                     width: 250px;
+                }
+
+                @include for-tablet-layout {
+                    right: 10%;
+                    translate: 10% -72%;
+                }
+
+                @include for-desktop-layout {
+                    width: 290px;
+                }
+
+                @include for-large-layout {
+                    right: 15%;
+                    translate: 15% -72%;
+                    width: 20%;
                 }
             }
 
