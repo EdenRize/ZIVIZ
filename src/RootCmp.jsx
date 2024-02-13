@@ -4,6 +4,7 @@ import { HomePage } from './views/HomePage';
 import { setScreenSize } from './store/actions/app.actions'
 import 'animate.css';
 import { Gallery } from './views/Gallery';
+import { About } from './views/About';
 
 
 
@@ -28,6 +29,7 @@ export function RootCmp() {
             <Routes>
                 <Route element={<HomePage />} path="/" />
                 <Route element={<Gallery />} path="/gallery" />
+                <Route element={<About />} path="/about" />
             </Routes>
         </section>
     )

@@ -1,0 +1,60 @@
+.about {
+
+    .page-content {
+        margin-inline: 30px;
+
+        p {
+            margin-block-end: 30px;
+            text-align: center;
+            font-size: 1.5rem;
+
+            @include for-mobile-layout {
+                font-size: 1.6rem;
+            }
+
+            @include for-narrow-layout {
+                font-size: 1.7rem;
+            }
+
+            @include for-tablet-layout {
+                margin-block-end: 40px;
+                font-size: 1.8rem;
+                max-width: 800px;
+            }
+
+            @include for-large-layout {
+                margin-block-end: 60px;
+                font-size: calc(10px + 1.1vw);
+                max-width: 1000px;
+            }
+
+        }
+
+    }
+
+    .sumo {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        opacity: .4;
+        width: 140px;
+
+        @include for-mobile-layout {
+            width: 190px;
+        }
+
+        @include for-tablet-layout {
+            width: 210px;
+        }
+
+        @include for-desktop-layout {
+            width: 250px;
+        }
+
+        @include for-large-layout {
+            left: 2%;
+            width: 15%;
+        }
+    }
+
+}

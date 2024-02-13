@@ -31,3 +31,101 @@ a {
     all: unset;
     cursor: pointer;
 }
+
+.page {
+    overflow-x: hidden;
+}
+
+.page-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $main-clr;
+
+    h1 {
+        letter-spacing: 0.3rem;
+        text-align: center;
+        padding-block: 20px;
+        font-size: 2.2rem;
+
+        @include for-tablet-layout {
+            letter-spacing: 0.4rem;
+            padding-block: 30px;
+            font-size: 2.5rem;
+
+            .logo {
+                letter-spacing: 0.2rem !important;
+                font-size: 2.4rem !important;
+            }
+        }
+
+        @include for-desktop-layout {
+            padding-block-end: 40px;
+            font-size: 3.1rem;
+
+            .logo {
+                font-size: 3rem !important;
+            }
+        }
+
+        @include for-large-layout {
+            padding-block-end: 50px;
+            font-size: 3.5rem;
+
+            .logo {
+                font-size: 3.4rem !important;
+            }
+        }
+
+        .logo {
+            display: inline-block;
+            letter-spacing: 0.1rem;
+            font-size: 2.1rem;
+        }
+    }
+
+    .back-arrow {
+        position: absolute;
+        left: 7px;
+        top: 10px;
+        width: 25px;
+
+        @include for-mobile-layout {
+            left: 10px;
+            width: 30px;
+        }
+
+        @include for-narrow-layout {
+            width: 35px;
+
+            &:hover {
+                filter: brightness(85%);
+            }
+        }
+
+        @include for-desktop-layout {
+            width: 40px;
+            left: 15px;
+        }
+
+        @include for-large-layout {
+            left: 25px;
+        }
+    }
+}
+
+.page-content {
+    margin-top: 95px;
+
+    @include for-tablet-layout {
+        margin-top: 121px;
+    }
+
+    @include for-desktop-layout {
+        margin-top: 142px;
+    }
+
+    @include for-large-layout {
+        margin-top: 161px;
+    }
+}
