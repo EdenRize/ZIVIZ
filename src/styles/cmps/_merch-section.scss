@@ -18,6 +18,7 @@
             font-size: 5rem;
 
             .logo {
+                letter-spacing: 0.2rem !important;
                 font-size: 4.9rem !important;
             }
         }
@@ -35,6 +36,7 @@
             font-size: calc(10px + 10vh);
 
             .logo {
+                letter-spacing: 0.4rem !important;
                 font-size: calc(5px + 10vh) !important;
             }
         }
@@ -75,51 +77,176 @@
         position: absolute;
 
         &.ziv {
-            width: 65%;
-            top: -5px;
+            width: 68%;
+            top: 0;
             left: -30px;
+
+            @include for-mobile-layout {
+                width: 55%;
+            }
+
+            @include for-narrow-layout {
+                width: 47%;
+            }
+
+            @include for-tablet-layout {
+                width: 40%;
+            }
+
+            @include for-desktop-layout {
+                width: 30%;
+            }
+
+            @include for-large-layout {
+                width: 25%;
+            }
         }
 
         &.ziv-2 {
-            width: 250px;
-            top: 50%;
-            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
         }
 
         &.ziv-and-men {
-            width: 350px;
+            width: 85%;
             top: 100px;
             right: 0;
+
+            @include for-mobile-layout {
+                width: 70%;
+            }
+
+            @include for-narrow-layout {
+                width: 60%;
+            }
+
+            @include for-tablet-layout {
+                width: 50%;
+            }
+
+            @include for-desktop-layout {
+                width: 40%;
+            }
+
+            @include for-large-layout {
+                width: 35%;
+            }
         }
 
         &.ziv-and-men-2 {
-            width: 350px;
+            width: 85%;
             bottom: -30px;
             right: -70px;
+
+            @include for-mobile-layout {
+                width: 70%;
+            }
+
+            @include for-tablet-layout {
+                width: 65%;
+            }
+
+            @include for-desktop-layout {
+                right: 0;
+                width: 55%;
+            }
+
+            @include for-large-layout {
+                bottom: -100px;
+                width: 45%;
+            }
         }
 
         &.no-faces {
-            width: 350px;
+            width: 85%;
             top: -40px;
-            right: -90px;
+            right: -50px;
+
+            @include for-mobile-layout {
+                width: 70%;
+            }
+
+            @include for-tablet-layout {
+                width: 65%;
+            }
+
+            @include for-tablet-layout {
+                top: -90px;
+                width: 60%;
+            }
+
+            @include for-desktop-layout {
+                top: -90px;
+                width: 55%;
+            }
         }
 
         &.men {
-            width: 250px;
+            width: 68%;
             left: -80px;
             bottom: -5px;
+
+            @include for-mobile-layout {
+                width: 56%;
+            }
+
+            @include for-narrow-layout {
+                width: 47%;
+            }
+
+            @include for-tablet-layout {
+                width: 43%;
+            }
+
+            @include for-desktop-layout {
+                width: 32%;
+            }
         }
 
         &.men-2 {
-            width: 200px;
+            width: 50%;
             right: 5px;
             bottom: 190px;
+
+            @include for-mobile-layout {
+                width: 40%;
+            }
+
+            @include for-narrow-layout {
+                right: 45px;
+                width: 30%;
+            }
+
+            @include for-tablet-layout {
+                width: 25%;
+            }
+
+            @include for-desktop-layout {
+                width: 20%;
+            }
         }
 
         &.men-3 {
-            width: 280px;
-            left: -90px;
+            width: 65%;
+            left: -70px;
             bottom: 30%;
+
+            @include for-mobile-layout {
+                width: 60%;
+            }
+
+            @include for-tablet-layout {
+                bottom: 33%;
+                width: 55%;
+            }
+
+            @include for-desktop-layout {
+                width: 40%;
+            }
+
         }
     }
 }

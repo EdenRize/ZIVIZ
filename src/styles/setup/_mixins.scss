@@ -29,7 +29,7 @@
     }
 }
 
-//1200px +
+//1350px +
 @mixin for-large-layout {
     @media (min-width: $large-breakpoint) {
         @content;

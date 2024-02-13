@@ -34,32 +34,38 @@
 
     .girl-skate {
         position: fixed;
-        left: 0;
+        left: 200%;
         bottom: 0;
-        opacity: 0;
+        opacity: .6;
         width: 140px;
-        animation: fadeIn4 1s ease-out forwards;
+        animation: slideIn 1.3s cubic-bezier(0, 0, 0.34, 0.96) forwards;
 
         @include for-mobile-layout {
             width: 190px;
         }
 
         @include for-tablet-layout {
+            animation-duration: 1.5s;
             width: 210px;
         }
 
         @include for-desktop-layout {
+            animation-duration: 2s;
             width: 250px;
         }
 
         @include for-large-layout {
-            left: 2%;
+            animation-duration: 2.5s;
             width: 15%;
         }
 
-        @keyframes fadeIn4 {
+        @keyframes slideIn {
             to {
-                opacity: .4;
+                left: 0;
+
+                @include for-large-layout {
+                    left: 2%;
+                }
             }
         }
     }
