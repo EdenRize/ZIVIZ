@@ -126,7 +126,7 @@
             }
         }
 
-        &.contact-section {
+        &.contact-route-section {
 
             p {
                 top: 45%;
@@ -152,6 +152,15 @@
 
                 @include for-large-layout {
                     max-width: 750px;
+                }
+
+                span {
+                    color: $secondary-clr;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
 

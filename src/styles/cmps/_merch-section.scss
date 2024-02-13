@@ -1,10 +1,10 @@
 .merch-section {
     position: relative;
     overflow-y: hidden;
-    text-shadow: 1.5px 1.5px 1px $main-clr,
-        -1.5px -1.5px 1px darken($main-clr, 10%),
-        1.5px -1.5px 1px lighten($main-clr, 10%),
-        -1.5px 1.5px 1px darken($main-clr, 20%);
+    text-shadow: 2px 2px 2px $main-clr,
+        -2px -2px 2px darken($main-clr, 10%),
+        2px -2px 2px lighten($main-clr, 10%),
+        -2px 2px 2px darken($main-clr, 20%);
 
     h1 {
         padding-block: unset;

@@ -1,0 +1,66 @@
+.social-link {
+    .icon-container {
+        background-color: $secondary-clr;
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        transition: .2s;
+        // transform: scale(0, 0);
+
+        @include for-mobile-layout {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @include for-tablet-layout {
+            width: 4.2rem;
+            height: 4.2rem;
+        }
+
+        @include for-desktop-layout {
+            width: 4.7rem;
+            height: 4.7rem;
+        }
+
+        @include for-large-layout {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+
+
+        img {
+            width: 30px;
+            height: 30px;
+            transition: .2s;
+            // opacity: 0;
+
+            @include for-mobile-layout {
+                width: 35px;
+                height: 35px;
+            }
+
+            @include for-tablet-layout {
+                width: 37px;
+                height: 37px;
+            }
+
+            @include for-desktop-layout {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include for-large-layout {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05, 1.05);
+
+            img {
+                transform: scale(0.95, 0.95);
+            }
+        }
+    }
+}
