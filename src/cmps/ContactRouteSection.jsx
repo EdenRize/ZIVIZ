@@ -1,10 +1,7 @@
 export function ContactRouteSection() {
 
     function scrollToBottom() {
-        window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
-        })
+        document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' })
     }
 
     return (
