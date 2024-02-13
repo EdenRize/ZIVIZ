@@ -29,7 +29,16 @@ h6 {
 
 a {
     all: unset;
+    color: $secondary-clr;
     cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.logo {
+    color: $font-clr1;
 }
 
 .page {

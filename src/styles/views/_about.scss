@@ -32,12 +32,13 @@
 
     }
 
-    .sumo {
+    .girl-skate {
         position: fixed;
         left: 0;
         bottom: 0;
-        opacity: .4;
+        opacity: 0;
         width: 140px;
+        animation: fadeIn4 1s ease-out forwards;
 
         @include for-mobile-layout {
             width: 190px;
@@ -54,6 +55,12 @@
         @include for-large-layout {
             left: 2%;
             width: 15%;
+        }
+
+        @keyframes fadeIn4 {
+            to {
+                opacity: .4;
+            }
         }
     }
 

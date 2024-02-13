@@ -29,7 +29,7 @@ export function About() {
                 </p>
             </div>
 
-            <img className="sumo" src="/img/girl-skate.png" />
+            <img className="girl-skate" src="/img/girl-skate.png" />
 
         </section>
     )
