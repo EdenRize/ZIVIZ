@@ -1,0 +1,10 @@
+.five-stars {
+    img {
+        width: 25px;
+        // margin-inline: 5px;
+
+        @include for-mobile-layout {
+            width: 30px;
+        }
+    }
+}

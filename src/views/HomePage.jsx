@@ -2,6 +2,7 @@ import { Hero } from "../cmps/Hero"
 import { AboutSection } from "../cmps/AboutSection"
 import { GallerySection } from "../cmps/GallerySection"
 import { ContactSection } from "../cmps/ContactSection"
+import { ReviewSection } from "../cmps/ReviewSection"
 
 export function HomePage() {
 
@@ -13,6 +14,8 @@ export function HomePage() {
                 <GallerySection />
                 <ContactSection />
             </div>
+
+            <ReviewSection />
         </section>
     )
 }

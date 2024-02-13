@@ -1,0 +1,95 @@
+.review-section {
+
+
+    // .five-stars {
+    //     justify-content: center;
+    //     padding: 20px;
+    // }
+
+    .review-list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        height: 100%;
+        padding-inline: 20px;
+
+        .review {
+            position: relative;
+            justify-self: end;
+            max-width: 200px;
+            font-size: 1.1rem;
+
+            @include for-mobile-layout {
+                max-width: 250px;
+                font-size: 1.3rem;
+            }
+
+            @include for-narrow-layout {
+                max-width: 350px;
+                font-size: 1.5rem;
+            }
+
+            @include for-tablet-layout {
+                max-width: 420px;
+            }
+
+            @include for-desktop-layout {
+                max-width: 600px;
+                font-size: 1.8rem;
+            }
+
+
+            @include for-large-layout {
+                max-width: 750px;
+                font-size: calc(10px + 1.5vw);
+            }
+
+            .five-stars {
+                position: absolute;
+                bottom: 30px;
+                left: 90%;
+                opacity: .8;
+
+                @include for-mobile-layout {
+                    left: 100%;
+                }
+
+                @include for-narrow-layout {
+                    left: 110%;
+                }
+            }
+
+            .quote {
+                position: absolute;
+                top: 20px;
+                right: -13px;
+                width: 120px;
+            }
+
+            &.even {
+                justify-self: start;
+
+                .five-stars {
+                    bottom: 40px;
+                    left: unset;
+                    right: 90%;
+
+                    @include for-mobile-layout {
+                        right: 100%;
+                    }
+
+                    @include for-narrow-layout {
+                        right: 110%;
+                    }
+                }
+            }
+
+            p {
+                z-index: 1;
+            }
+
+        }
+
+    }
+
+}
