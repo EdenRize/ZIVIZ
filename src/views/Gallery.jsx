@@ -34,7 +34,7 @@ export function Gallery() {
     return (
         <section className="page gallery">
             <header className="page-header">
-                <h1 className="ltr"><Link to="/"><Logo /></Link>'s Gallery</h1>
+                <h1 className="ltr logo-header"><Link to="/"><Logo /></Link>'s Gallery</h1>
                 <Link to="/"><img className="back-arrow" src="/img/back.svg" /></Link>
             </header>
             <div className="page-content">

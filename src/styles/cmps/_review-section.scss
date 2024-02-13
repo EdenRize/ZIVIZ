@@ -13,6 +13,18 @@
         height: 100%;
         padding-inline: 20px;
 
+        @include for-narrow-layout {
+            padding-inline: 30px;
+        }
+
+        @include for-tablet-layout {
+            padding-inline: 40px;
+        }
+
+        @include for-large-layout {
+            padding-inline: 70px;
+        }
+
         .review {
             position: relative;
             justify-self: end;
@@ -61,7 +73,7 @@
 
             .quote {
                 position: absolute;
-                top: 20px;
+                top: 30px;
                 right: -13px;
                 width: 120px;
             }

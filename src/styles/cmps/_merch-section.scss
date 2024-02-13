@@ -1,0 +1,125 @@
+.merch-section {
+    position: relative;
+    overflow-y: hidden;
+    text-shadow: 1.5px 1.5px 1px $main-clr,
+        -1.5px -1.5px 1px darken($main-clr, 10%),
+        1.5px -1.5px 1px lighten($main-clr, 10%),
+        -1.5px 1.5px 1px darken($main-clr, 20%);
+
+    h1 {
+        padding-block: unset;
+        margin-block-end: 10px;
+        letter-spacing: 0.3rem;
+        font-size: 3.8rem;
+        z-index: 1;
+
+        @include for-narrow-layout {
+            letter-spacing: 0.4rem;
+            font-size: 5rem;
+
+            .logo {
+                font-size: 4.9rem !important;
+            }
+        }
+
+        @include for-desktop-layout {
+            letter-spacing: 0.5rem;
+            font-size: 6rem;
+
+            .logo {
+                font-size: 5.9rem !important;
+            }
+        }
+
+        @include for-large-layout {
+            font-size: calc(10px + 10vh);
+
+            .logo {
+                font-size: calc(5px + 10vh) !important;
+            }
+        }
+
+
+        .logo {
+            display: inline-block;
+            letter-spacing: 0.1rem;
+            font-size: 3.7rem;
+        }
+    }
+
+    p {
+        letter-spacing: 0.15rem;
+        font-size: 2.5rem;
+        z-index: 1;
+
+        @include for-narrow-layout {
+            letter-spacing: 0.2rem;
+            font-size: 3rem;
+        }
+
+        @include for-desktop-layout {
+            letter-spacing: 0.25rem;
+            font-size: 3.2rem;
+        }
+
+        @include for-large-layout {
+            font-size: calc(5px + 5vh);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    img {
+        position: absolute;
+
+        &.ziv {
+            width: 65%;
+            top: -5px;
+            left: -30px;
+        }
+
+        &.ziv-2 {
+            width: 250px;
+            top: 50%;
+            right: 0;
+        }
+
+        &.ziv-and-men {
+            width: 350px;
+            top: 100px;
+            right: 0;
+        }
+
+        &.ziv-and-men-2 {
+            width: 350px;
+            bottom: -30px;
+            right: -70px;
+        }
+
+        &.no-faces {
+            width: 350px;
+            top: -40px;
+            right: -90px;
+        }
+
+        &.men {
+            width: 250px;
+            left: -80px;
+            bottom: -5px;
+        }
+
+        &.men-2 {
+            width: 200px;
+            right: 5px;
+            bottom: 190px;
+        }
+
+        &.men-3 {
+            width: 280px;
+            left: -90px;
+            bottom: 30%;
+        }
+    }
+}

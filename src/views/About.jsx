@@ -6,7 +6,7 @@ export function About() {
         <section className="page about">
 
             <header className="page-header">
-                <h1 className="ltr">About <Link to="/"><Logo /></Link></h1>
+                <h1 className="ltr logo-header">About <Link to="/"><Logo /></Link></h1>
                 <Link to="/"><img className="back-arrow" src="/img/back.svg" /></Link>
             </header>
 

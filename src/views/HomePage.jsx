@@ -3,6 +3,7 @@ import { AboutSection } from "../cmps/AboutSection"
 import { GallerySection } from "../cmps/GallerySection"
 import { ContactSection } from "../cmps/ContactSection"
 import { ReviewSection } from "../cmps/ReviewSection"
+import { MerchSection } from "../cmps/MerchSection"
 
 export function HomePage() {
 
@@ -16,6 +17,7 @@ export function HomePage() {
             </div>
 
             <ReviewSection />
+            <MerchSection />
         </section>
     )
 }

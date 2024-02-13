@@ -51,48 +51,6 @@ a {
     width: 100%;
     background-color: $main-clr;
 
-    h1 {
-        letter-spacing: 0.3rem;
-        text-align: center;
-        padding-block: 20px;
-        font-size: 2.2rem;
-
-        @include for-tablet-layout {
-            letter-spacing: 0.4rem;
-            padding-block: 30px;
-            font-size: 2.5rem;
-
-            .logo {
-                letter-spacing: 0.2rem !important;
-                font-size: 2.4rem !important;
-            }
-        }
-
-        @include for-desktop-layout {
-            padding-block-end: 40px;
-            font-size: 3.1rem;
-
-            .logo {
-                font-size: 3rem !important;
-            }
-        }
-
-        @include for-large-layout {
-            padding-block-end: 50px;
-            font-size: 3.5rem;
-
-            .logo {
-                font-size: 3.4rem !important;
-            }
-        }
-
-        .logo {
-            display: inline-block;
-            letter-spacing: 0.1rem;
-            font-size: 2.1rem;
-        }
-    }
-
     .back-arrow {
         position: absolute;
         left: 7px;
@@ -120,6 +78,48 @@ a {
         @include for-large-layout {
             left: 25px;
         }
+    }
+}
+
+.logo-header {
+    letter-spacing: 0.3rem;
+    text-align: center;
+    padding-block: 20px;
+    font-size: 2.2rem;
+
+    @include for-tablet-layout {
+        letter-spacing: 0.4rem;
+        padding-block: 30px;
+        font-size: 2.5rem;
+
+        .logo {
+            letter-spacing: 0.2rem !important;
+            font-size: 2.4rem !important;
+        }
+    }
+
+    @include for-desktop-layout {
+        padding-block-end: 40px;
+        font-size: 3.1rem;
+
+        .logo {
+            font-size: 3rem !important;
+        }
+    }
+
+    @include for-large-layout {
+        padding-block-end: 50px;
+        font-size: 3.5rem;
+
+        .logo {
+            font-size: 3.4rem !important;
+        }
+    }
+
+    .logo {
+        display: inline-block;
+        letter-spacing: 0.1rem;
+        font-size: 2.1rem;
     }
 }
 
