@@ -98,7 +98,7 @@
             }
 
             @include for-large-layout {
-                width: 25%;
+                width: 15%;
             }
         }
 
@@ -132,7 +132,9 @@
             }
 
             @include for-large-layout {
-                width: 35%;
+                width: 25%;
+                top: 23%;
+                right: 25%;
             }
         }
 
@@ -155,8 +157,39 @@
             }
 
             @include for-large-layout {
-                bottom: -100px;
-                width: 45%;
+                bottom: -80px;
+                width: 37%;
+            }
+        }
+
+        &.ziv-and-men3 {
+            width: 50%;
+            top: 10%;
+            right: 30%;
+
+            @include for-desktop-layout {
+                width: 30%;
+            }
+
+            @include for-large-layout {
+                top: 0;
+                right: 0;
+                width: 20%;
+            }
+        }
+
+        &.ziv-and-men4 {
+            width: 50%;
+            bottom: 10%;
+            left: 20%;
+
+            @include for-desktop-layout {
+                width: 30%;
+            }
+
+            @include for-large-layout {
+                bottom: 2%;
+                width: 25%;
             }
         }
 
@@ -182,6 +215,11 @@
                 top: -90px;
                 width: 55%;
             }
+
+            @include for-large-layout {
+                right: 23%;
+                width: 45%;
+            }
         }
 
         &.men {
@@ -203,6 +241,10 @@
 
             @include for-desktop-layout {
                 width: 32%;
+            }
+
+            @include for-large-layout {
+                width: 20%;
             }
         }
 
@@ -227,6 +269,12 @@
             @include for-desktop-layout {
                 width: 20%;
             }
+
+            @include for-large-layout {
+                right: 40%;
+                bottom: 10%;
+                width: 13%;
+            }
         }
 
         &.men-3 {
@@ -244,7 +292,13 @@
             }
 
             @include for-desktop-layout {
+                left: 30px;
                 width: 40%;
+            }
+
+            @include for-large-layout {
+                left: 5%;
+                width: 25%;
             }
 
         }
