@@ -5,6 +5,7 @@ import { ContactRouteSection } from "../cmps/ContactRouteSection"
 import { ReviewSection } from "../cmps/ReviewSection"
 import { MerchSection } from "../cmps/MerchSection"
 import { ContactSection } from "../cmps/ContactSection"
+import { ScrollArrow } from "../cmps/ScrollArrow"
 
 export function HomePage() {
 

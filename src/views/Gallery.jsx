@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GalleryList } from "../cmps/GalleryList";
 import { Logo } from "../cmps/Logo";
+import { ScrollArrow } from "../cmps/ScrollArrow";
 
 export function Gallery() {
 
@@ -40,6 +41,8 @@ export function Gallery() {
             <div className="page-content">
                 <GalleryList imgUrls={imgUrls} />
             </div>
+            <ScrollArrow />
+
         </section>
     )
 }

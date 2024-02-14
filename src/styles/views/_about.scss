@@ -3,6 +3,12 @@
     .page-content {
         margin-inline: 30px;
 
+        h3 {
+            font-size: 1.8rem;
+            margin-block-end: 20px;
+            color: $secondary-clr;
+        }
+
         p {
             margin-block-end: 30px;
             text-align: center;
@@ -36,7 +42,7 @@
         position: fixed;
         left: 200%;
         bottom: 0;
-        opacity: .6;
+        opacity: .3;
         width: 140px;
         animation: slideIn 1.3s cubic-bezier(0, 0, 0.34, 0.96) forwards;
 
@@ -69,5 +75,7 @@
             }
         }
     }
+
+
 
 }
