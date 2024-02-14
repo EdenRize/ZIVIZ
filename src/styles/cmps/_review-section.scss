@@ -28,17 +28,17 @@
         .review {
             position: relative;
             justify-self: end;
-            max-width: 200px;
-            font-size: 1.1rem;
+            max-width: 250px;
+            font-size: 1.5rem;
 
             @include for-mobile-layout {
-                max-width: 250px;
-                font-size: 1.3rem;
+                max-width: 300px;
+                font-size: 1.6rem;
             }
 
             @include for-narrow-layout {
                 max-width: 350px;
-                font-size: 1.5rem;
+                font-size: 1.9rem;
             }
 
             @include for-tablet-layout {
@@ -47,7 +47,7 @@
 
             @include for-desktop-layout {
                 max-width: 600px;
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
 
