@@ -1,6 +1,6 @@
 
-export function ScrollArrow() {
+export function ScrollArrow({ isShow }) {
     return (
-        <img className="down-arrow" src="/img/down.svg" />
+        <img className={`${isShow ? 'visible' : ''} down-arrow`} src="/img/down.svg" />
     )
 }

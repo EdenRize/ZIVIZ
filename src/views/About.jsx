@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../cmps/Logo";
 import { ScrollArrow } from "../cmps/ScrollArrow";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { addVisitedSection } from "../store/actions/app.actions";
 
 export function About() {
+    const [showScrollArrow, setShowScrollArrow] = useState(false)
+    const visitedSections = useSelector(state => state.appModule.visitedSections)
+
+    useEffect(() => {
+
+        if (visitedSections.includes('about')) {
+            setShowScrollArrow(false)
+            return
+        } else {
+            addVisitedSection('about')
+            setShowScrollArrow(true)
+        }
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset;
+
+            if (scrollTop > 0) {
+                setShowScrollArrow(false);
+                window.removeEventListener("scroll", handleScroll);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
+
     return (
         <section className="page about">
 
@@ -41,7 +73,7 @@ export function About() {
                 </p>
             </div>
 
-            <ScrollArrow />
+            <ScrollArrow isShow={showScrollArrow} />
             <img className="girl-skate" src="/img/girl-skate.png" />
 
         </section>

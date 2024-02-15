@@ -2,8 +2,39 @@ import { Link } from "react-router-dom";
 import { GalleryList } from "../cmps/GalleryList";
 import { Logo } from "../cmps/Logo";
 import { ScrollArrow } from "../cmps/ScrollArrow";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { addVisitedSection } from "../store/actions/app.actions";
 
 export function Gallery() {
+    const [showScrollArrow, setShowScrollArrow] = useState(false)
+    const visitedSections = useSelector(state => state.appModule.visitedSections)
+
+    useEffect(() => {
+
+        if (visitedSections.includes('gallery')) {
+            setShowScrollArrow(false)
+            return
+        } else {
+            addVisitedSection('gallery')
+            setShowScrollArrow(true)
+        }
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset;
+
+            if (scrollTop > 0) {
+                setShowScrollArrow(false);
+                window.removeEventListener("scroll", handleScroll);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
 
     const imgUrls = [
         '/img/dog.png',
@@ -41,7 +72,8 @@ export function Gallery() {
             <div className="page-content">
                 <GalleryList imgUrls={imgUrls} />
             </div>
-            <ScrollArrow />
+
+            <ScrollArrow isShow={showScrollArrow} />
 
         </section>
     )
