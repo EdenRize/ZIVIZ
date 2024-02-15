@@ -5,9 +5,11 @@
         img {
             position: absolute;
             top: 67%;
-            left: 0;
+            left: -300px;
             translate: 0 -67%;
             width: 250px;
+            opacity: 0;
+            transition: 1.1s ease-out;
 
             @include for-mobile-layout {
                 width: 365px;
@@ -19,7 +21,19 @@
 
             @include for-large-layout {
                 width: 35%;
-                left: 150px;
+                left: -1000px;
+            }
+        }
+
+        &.visible {
+            img {
+                left: 0;
+                opacity: 1;
+
+                @include for-large-layout {
+                    left: 150px;
+
+                }
             }
         }
 
@@ -65,22 +79,28 @@
 
             img {
                 left: unset;
-                right: -30px;
+                right: -300px;
                 translate: 0 -67%;
-
-                @include for-tablet-layout {
-                    right: -20px;
-                }
-
-                @include for-large-layout {
-                    right: 30px;
-                }
             }
 
             p {
                 right: unset;
                 left: 20%;
                 translate: -20% -48%;
+            }
+
+            &.visible {
+                img {
+                    right: -30px;
+
+                    @include for-tablet-layout {
+                        right: -20px;
+                    }
+
+                    @include for-large-layout {
+                        right: 30px;
+                    }
+                }
             }
         }
 
@@ -125,6 +145,7 @@
                     width: 30%;
                 }
             }
+
         }
 
         &.contact-route-section {
@@ -166,7 +187,6 @@
             }
 
             img {
-                right: 3px;
                 top: 72%;
                 translate: 0 -72%;
                 width: 165px;
@@ -184,9 +204,18 @@
                 }
 
                 @include for-large-layout {
-                    right: 10%;
                     translate: 10% -72%;
                     width: 20%;
+                }
+            }
+
+            &.visible {
+                img {
+                    right: 3px;
+
+                    @include for-large-layout {
+                        right: 10%;
+                    }
                 }
             }
 

@@ -8,12 +8,14 @@ import { ContactSection } from "../cmps/ContactSection"
 import { useSelector } from "react-redux"
 import { useEffect } from "react"
 
+
 export function HomePage() {
-    const currSection = useSelector(state => state.appModule.currSection)
+    const currSection = useSelector(state => state.appModule.currSection);
+
 
     useEffect(() => {
-        document.querySelector(`.${currSection}`).scrollIntoView({ behavior: 'instant' })
-    }, [])
+        document.querySelector(`.${currSection}`).scrollIntoView({ behavior: 'instant' });
+    }, [currSection]);
 
     return (
         <section className="home-page">
@@ -23,10 +25,9 @@ export function HomePage() {
                 <GallerySection />
                 <ContactRouteSection />
             </div>
-
             <ReviewSection />
             <MerchSection />
             <ContactSection />
         </section>
-    )
+    );
 }

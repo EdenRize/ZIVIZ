@@ -1,6 +1,6 @@
 .home-page {
-    // scroll-snap-type: y mandatory;
-    // scroll-behavior: smooth;
-    // max-height: 100vh;
-    // overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    max-height: 100vh;
+    overflow-y: auto;
 }
