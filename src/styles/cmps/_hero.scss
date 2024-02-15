@@ -45,7 +45,10 @@
     .hero-img {
         position: absolute;
         opacity: 0;
-        transition: 1s;
+
+        &:not(.visited .hero-img) {
+            transition: 1s;
+        }
 
         &.women {
             top: -68px;
@@ -96,7 +99,8 @@
         }
     }
 
-    &.visible {
+    &.visible,
+    &.visited {
         .hero-img {
             opacity: 1;
 

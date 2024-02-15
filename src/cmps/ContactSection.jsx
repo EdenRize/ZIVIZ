@@ -1,17 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { utilService } from "../services/util.service";
-import { SocialLink } from "./SocialLink";
 import { SocialList } from "./SocialList";
+import { useSelector } from "react-redux";
+import { addVisitedSection } from "../store/actions/app.actions";
 
 export function ContactSection() {
+    const [isvisited, setIsvisited] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
+    const visitedSections = useSelector(state => state.appModule.visitedSections);
+
 
     useEffect(() => {
+
+        if (visitedSections.includes('contact-section')) {
+            setIsVisible(true)
+            setIsvisited(true)
+            return
+        }
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
+                    addVisitedSection('contact-section')
                 }
             });
         }, { threshold: .5 });
@@ -46,7 +58,7 @@ export function ContactSection() {
     ]
 
     return (
-        <div className={`section ${isVisible ? 'visible' : ''} flex column align-center justify-center contact-section`} ref={sectionRef}>
+        <div className={`section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''} flex column align-center justify-center contact-section`} ref={sectionRef}>
             <h1><span>בואו</span> נדבר</h1>
             <p>הסטודיו שלי נמצא <span>בזיתים 11 - רמת גן</span>, אני זמינה לקביעת תורים וייעוץ <span>❤</span></p>
 

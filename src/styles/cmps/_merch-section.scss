@@ -352,6 +352,12 @@
         }
     }
 
+    &.visited {
+        img {
+            animation-delay: unset !important;
+        }
+    }
+
     @keyframes popIn {
         to {
             opacity: 1;

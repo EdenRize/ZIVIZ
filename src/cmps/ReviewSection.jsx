@@ -1,21 +1,32 @@
 import { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
+import { addVisitedSection } from "../store/actions/app.actions";
 
 export function ReviewSection() {
+    const [isvisited, setIsvisited] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
+    const visitedSections = useSelector(state => state.appModule.visitedSections);
 
     useEffect(() => {
+
+        if (visitedSections.includes('review-section')) {
+            setIsVisible(true)
+            setIsvisited(true)
+            return
+        }
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.intersectionRatio > 0) {
                     setIsVisible(true);
+                    addVisitedSection('review-section')
                 }
             });
-        }, { threshold: 0.5 }); // Intersection Observer threshold set to 0.5 (50%)
+        }, { threshold: 0.5 })
 
         observer.observe(sectionRef.current);
 
-        // Cleanup observer
         return () => observer.disconnect();
     }, []);
 
@@ -35,7 +46,7 @@ export function ReviewSection() {
     ]
 
     return (
-        <div className={`section flex column review-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
+        <div className={`section flex column review-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
             <ul className="clean-list review-list">
                 {reviews.map((review, idx) => {
                     return (

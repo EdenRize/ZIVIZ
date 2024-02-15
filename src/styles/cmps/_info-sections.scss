@@ -7,9 +7,12 @@
             top: 67%;
             left: -100px;
             translate: 0 -67%;
-            width: 250px;
             opacity: 0;
-            transition: .9s ease-out;
+            width: 250px;
+
+            &:not(.visited img) {
+                transition: .9s ease-out;
+            }
 
             @include for-mobile-layout {
                 width: 365px;
@@ -24,7 +27,8 @@
             }
         }
 
-        &.visible {
+        &.visible,
+        &.visited {
             img {
                 left: 0;
                 opacity: 1;
@@ -88,7 +92,8 @@
                 translate: -20% -48%;
             }
 
-            &.visible {
+            &.visible,
+            &.visited {
                 img {
                     right: -30px;
 
@@ -208,7 +213,8 @@
                 }
             }
 
-            &.visible {
+            &.visible,
+            &.visited {
                 img {
                     right: 3px;
 

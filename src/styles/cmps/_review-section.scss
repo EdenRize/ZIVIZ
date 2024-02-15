@@ -110,7 +110,11 @@
         position: absolute;
         border-radius: 4px;
         opacity: 0;
-        transition: 1s;
+
+        &:not(.visited img) {
+
+            transition: 1s;
+        }
 
 
         &.fish {
@@ -161,7 +165,8 @@
         }
     }
 
-    &.visible {
+    &.visible,
+    &.visited {
         img {
             opacity: .4;
 
