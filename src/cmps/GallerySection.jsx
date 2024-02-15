@@ -7,7 +7,7 @@ export function GallerySection() {
     const router = useNavigate();
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
-    const currSection = useSelector(state => state.appModule.currSection);
+    // const currSection = useSelector(state => state.appModule.currSection);
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
@@ -24,11 +24,11 @@ export function GallerySection() {
         return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-        if (currSection === 'gallery-section') {
-            setIsVisible(false);
-        }
-    }, [currSection]);
+    // useEffect(() => {
+    //     if (currSection === 'gallery-section') {
+    //         setIsVisible(true);
+    //     }
+    // }, []);
 
     function onLinkClick(ev) {
         ev.preventDefault();
