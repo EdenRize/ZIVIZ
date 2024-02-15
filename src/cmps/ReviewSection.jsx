@@ -33,6 +33,9 @@ export function ReviewSection() {
                 })}
             </ul>
 
+            <img className="fish" src="/img/fish-tatt.jpeg" />
+            <img className="women" src="/img/women-tatt.jpeg" />
+
         </div>
     )
 }

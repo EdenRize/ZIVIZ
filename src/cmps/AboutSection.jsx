@@ -1,11 +1,19 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { setCurrSection } from "../store/actions/app.actions";
 
 export function AboutSection() {
+    const router = useNavigate()
+
+    function onLinkClick(ev) {
+        ev.preventDefault()
+        setCurrSection('about-section')
+        router('/about')
+    }
+
     return (
         <div className="section even about-section">
             <img src="/img/fish.png" />
-            {/* <p>A tattoo artist blending modern flair with traditional craftsmanship to create vibrant and meaningful body art</p> */}
-            <p>אמן/ת קעקועים שמשלב/ת טווים מודרניים עם מלאכת יד מסורתית כדי ליצור יצירות בואו ל<Link to="/about">מי אני</Link></p>
+            <p>אמן/ת קעקועים שמשלב/ת טווים מודרניים עם מלאכת יד מסורתית כדי ליצור יצירות בואו ל<a href={`${window.origin}/about`} onClick={onLinkClick}>מי אני</a></p>
 
 
         </div>

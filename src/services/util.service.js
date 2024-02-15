@@ -6,7 +6,9 @@ export const utilService = {
     debounce,
     saveToStorage,
     loadFromStorage,
-    getScreenSize
+    getScreenSize,
+    getWazeLink,
+    geMapsLink
 }
 
 function readJsonFile(path) {
@@ -73,4 +75,12 @@ function getScreenSize(screenSize) {
     } else {
         return 'desktop'
     }
+}
+
+function getWazeLink(lat, lng) {
+    return `https://www.waze.com/live-map/directions?z=10&navigate=yes&to=ll.${lat}%2C${lng}`
+}
+
+function geMapsLink(lat, lng) {
+    return `https://www.google.com/maps?q=${lat}%20${lng}&iwloc=output=embed&z=10&hl=he`
 }

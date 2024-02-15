@@ -13,7 +13,7 @@ export function Gallery() {
         '/img/handheld-fan-women.png',
         '/img/horse-women.png',
         '/img/moon.png',
-        '/img/string.png',
+        '/img/tea.png',
         '/img/two-girls.png',
         '/img/two-women-flower.png',
         '/img/two-women.png',

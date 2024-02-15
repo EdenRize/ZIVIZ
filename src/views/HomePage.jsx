@@ -5,9 +5,15 @@ import { ContactRouteSection } from "../cmps/ContactRouteSection"
 import { ReviewSection } from "../cmps/ReviewSection"
 import { MerchSection } from "../cmps/MerchSection"
 import { ContactSection } from "../cmps/ContactSection"
-import { ScrollArrow } from "../cmps/ScrollArrow"
+import { useSelector } from "react-redux"
+import { useEffect } from "react"
 
 export function HomePage() {
+    const currSection = useSelector(state => state.appModule.currSection)
+
+    useEffect(() => {
+        document.querySelector(`.${currSection}`).scrollIntoView({ behavior: 'instant' })
+    }, [])
 
     return (
         <section className="home-page">

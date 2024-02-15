@@ -1,5 +1,5 @@
 .review-section {
-
+    position: relative;
 
     // .five-stars {
     //     justify-content: center;
@@ -76,6 +76,7 @@
                 top: 30px;
                 right: -13px;
                 width: 120px;
+                z-index: 1;
             }
 
             &.even {
@@ -102,6 +103,73 @@
 
         }
 
+    }
+
+    img {
+        position: absolute;
+        opacity: .4;
+        border-radius: 4px;
+
+
+        &.fish {
+            right: 10%;
+            top: 13%;
+            width: 130px;
+
+            @include for-mobile-layout {
+                width: 160px;
+            }
+
+            @include for-narrow-layout {
+                right: 15%;
+            }
+
+            @include for-tablet-layout {
+                // right: 20%;
+                top: 18%;
+                width: 200px;
+            }
+
+            @include for-desktop-layout {
+                right: 18%;
+                width: 240px;
+            }
+
+            @include for-large-layout {
+                right: 18%;
+                width: 18%;
+            }
+        }
+
+        &.women {
+            left: 10%;
+            bottom: 22%;
+            width: 160px;
+
+            @include for-mobile-layout {
+                width: 180px;
+            }
+
+            @include for-narrow-layout {
+                left: 15%;
+            }
+
+            @include for-tablet-layout {
+                left: 20%;
+                bottom: 20%;
+                width: 220px;
+            }
+
+            @include for-desktop-layout {
+                left: 20%;
+                width: 260px;
+            }
+
+            @include for-large-layout {
+                bottom: 10%;
+                width: 18%;
+            }
+        }
     }
 
 }

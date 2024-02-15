@@ -1,11 +1,12 @@
 
 export const SET_IS_LOADING = 'SET_IS_LOADING'
-export const SET_SCREEN_SIZE = 'SET_SCREEN_SIZE'
+export const SET_CURR_SECTION = 'SET_CURR_SECTION'
 
 
 const initialState = {
   isLoading: false,
-  screenSize: 0,
+  currSection: 'hero'
+
 }
 
 export function appReducer(state = initialState, action = {}) {
@@ -14,8 +15,8 @@ export function appReducer(state = initialState, action = {}) {
     case SET_IS_LOADING:
       return { ...state, isLoading: action.isLoading }
 
-    case SET_SCREEN_SIZE:
-      return { ...state, screenSize: action.screenSize }
+    case SET_CURR_SECTION:
+      return { ...state, currSection: action.currSection }
 
     default: return state
   }
