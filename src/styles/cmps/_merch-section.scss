@@ -53,6 +53,7 @@
         letter-spacing: 0.15rem;
         font-size: 2.5rem;
         z-index: 1;
+        animation: textShadowAnimation 3s infinite alternate;
 
         @include for-narrow-layout {
             letter-spacing: 0.2rem;
@@ -354,6 +355,29 @@
     @keyframes popIn {
         to {
             opacity: 1;
+        }
+    }
+
+    @keyframes textShadowAnimation {
+        0% {
+            text-shadow: 2px 2px 2px $main-clr,
+                -2px -2px 2px darken($main-clr, 10%),
+                2px -2px 2px lighten($main-clr, 10%),
+                -2px 2px 2px darken($main-clr, 20%);
+        }
+
+        50% {
+            text-shadow: 2px 2px 4.3px $main-clr,
+                -2px -2px 4.3px darken($main-clr, 15%),
+                2px -2px 4.3px lighten($main-clr, 15%),
+                -2px 2px 4.3px darken($main-clr, 25%);
+        }
+
+        100% {
+            text-shadow: 2px 2px 2px $main-clr,
+                -2px -2px 2px darken($main-clr, 10%),
+                2px -2px 2px lighten($main-clr, 10%),
+                -2px 2px 2px darken($main-clr, 20%);
         }
     }
 }
