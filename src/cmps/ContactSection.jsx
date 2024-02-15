@@ -1,8 +1,26 @@
+import { useEffect, useRef, useState } from "react";
 import { utilService } from "../services/util.service";
 import { SocialLink } from "./SocialLink";
 import { SocialList } from "./SocialList";
 
 export function ContactSection() {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            });
+        }, { threshold: .5 });
+
+        observer.observe(sectionRef.current);
+
+        // Cleanup observer
+        return () => observer.disconnect();
+    }, []);
 
     const socials = [
         {
@@ -28,7 +46,7 @@ export function ContactSection() {
     ]
 
     return (
-        <div className="section flex column align-center justify-center contact-section">
+        <div className={`section ${isVisible ? 'visible' : ''} flex column align-center justify-center contact-section`} ref={sectionRef}>
             <h1><span>בואו</span> נדבר</h1>
             <p>הסטודיו שלי נמצא <span>בזיתים 11 - רמת גן</span>, אני זמינה לקביעת תורים וייעוץ <span>❤</span></p>
 
