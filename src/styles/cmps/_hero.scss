@@ -45,11 +45,11 @@
     .hero-img {
         position: absolute;
         opacity: 0;
-        animation: fadeIn 1s ease-out forwards;
+        transition: 1s;
 
         &.women {
             top: -68px;
-            right: -67px;
+            right: -80px;
             width: 250px;
 
             @include for-narrow-layout {
@@ -62,7 +62,6 @@
 
             @include for-desktop-layout {
                 top: -55px;
-                right: -55px;
                 width: 370px;
             }
 
@@ -74,7 +73,7 @@
 
         &.flowers {
             bottom: -82px;
-            left: -23px;
+            left: -40px;
             width: 200px;
 
             @include for-narrow-layout {
@@ -87,7 +86,6 @@
             }
 
             @include for-desktop-layout {
-                left: -10px;
                 width: 300px;
             }
 
@@ -97,6 +95,26 @@
             }
         }
     }
-}
 
-@include fadeIn;
+    &.visible {
+        .hero-img {
+            opacity: 1;
+
+            &.women {
+                right: -67px;
+
+                @include for-desktop-layout {
+                    right: -55px;
+                }
+            }
+
+            &.flowers {
+                left: -23px;
+
+                @include for-desktop-layout {
+                    left: -10px;
+                }
+            }
+        }
+    }
+}

@@ -5,11 +5,11 @@
         img {
             position: absolute;
             top: 67%;
-            left: -300px;
+            left: -100px;
             translate: 0 -67%;
             width: 250px;
             opacity: 0;
-            transition: 1.1s ease-out;
+            transition: .9s ease-out;
 
             @include for-mobile-layout {
                 width: 365px;
@@ -21,7 +21,6 @@
 
             @include for-large-layout {
                 width: 35%;
-                left: -1000px;
             }
         }
 
@@ -79,7 +78,7 @@
 
             img {
                 left: unset;
-                right: -300px;
+                right: -100px;
                 translate: 0 -67%;
             }
 
