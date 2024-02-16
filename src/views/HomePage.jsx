@@ -28,6 +28,7 @@ export function HomePage() {
             <ReviewSection />
             <MerchSection />
             <ContactSection />
+            <div style={{ height: '150px' }}></div>
         </section>
     );
 }

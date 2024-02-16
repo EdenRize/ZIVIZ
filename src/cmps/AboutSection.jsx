@@ -48,7 +48,7 @@ export function AboutSection() {
     return (
         <div className={`section even about-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
             <img className="fish-img" src="/img/fish.png" />
-            <p>אמן/ת קעקועים שמשלב/ת טווים מודרניים עם מלאכת יד מסורתית כדי ליצור יצירות בואו ל<a href={`${window.origin}/about`} onClick={onLinkClick}>מי אני</a></p>
+            <p>לפני הקעקוע, חשוב להכיר את הסיפור מאחורי המקעקע. בואו <a href={`${window.origin}/about`} onClick={onLinkClick}>להכיר אותי</a></p>
         </div>
     );
 }

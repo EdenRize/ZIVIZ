@@ -76,6 +76,10 @@
                 max-width: 750px;
                 font-size: calc(10px + 1.5vw);
             }
+
+            a {
+                text-wrap: nowrap;
+            }
         }
 
         &.even {

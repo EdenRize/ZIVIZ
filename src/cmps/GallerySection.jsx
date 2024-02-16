@@ -42,7 +42,7 @@ export function GallerySection() {
     return (
         <div className={`section gallery-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
             <img className="women-cry-img" src="/img/women-cry-sun.png" />
-            <p>אמן/ת קעקועים שמשלב/ת טווים מודרניים עם מלאכת יד מסורתית כדי ליצור יצירות בואו ל<a href={`${window.origin}/gallery`} onClick={onLinkClick}>גלריה</a></p>
+            <p>לעוד פלאשים וסקיצות מבית ZIVIZ, היכנסו ל<a href={`${window.origin}/gallery`} onClick={onLinkClick}>גלריה</a></p>
         </div>
     );
 }
