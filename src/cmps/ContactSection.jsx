@@ -3,6 +3,7 @@ import { utilService } from "../services/util.service";
 import { SocialList } from "./SocialList";
 import { useSelector } from "react-redux";
 import { addVisitedSection } from "../store/actions/app.actions";
+import { Image } from "./Image";
 
 export function ContactSection() {
     const [isvisited, setIsvisited] = useState(false);
@@ -64,8 +65,8 @@ export function ContactSection() {
 
             <SocialList socials={socials} />
 
-            <img className="girl" src="/img/girl-bat.png" />
-            <img className="sumo" src="/img/sumo.png" />
+            <Image classes={['girl']} src="/img/girl-bat.png" />
+            <Image classes={['sumo']} src="/img/sumo.png" />
         </div>
     )
 }
