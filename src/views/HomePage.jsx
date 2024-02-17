@@ -19,6 +19,7 @@ export function HomePage() {
 
     return (
         <section className="home-page">
+            <div style={{ height: '150px' }}></div>
             <Hero />
             <div className="info-sections">
                 <AboutSection />
