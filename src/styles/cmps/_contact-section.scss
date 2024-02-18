@@ -127,6 +127,25 @@
         }
     }
 
+    .copyrights {
+        position: absolute;
+        bottom: 0;
+        padding-block-end: 10px;
+        font-size: 1.1rem;
+
+        @include for-mobile-layout {
+            font-size: 1.2rem;
+        }
+
+        @include for-tablet-layout {
+            font-size: 1.4rem;
+        }
+
+        @include for-large-layout {
+            font-size: calc(5px + 2vh);
+        }
+    }
+
     @include scaleIn;
     @include fadeIn;
 }

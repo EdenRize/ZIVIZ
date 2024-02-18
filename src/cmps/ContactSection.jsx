@@ -63,6 +63,7 @@ export function ContactSection() {
             <p>הסטודיו שלי נמצא <span>בזיתים 11 - רמת גן</span>, אני זמינה לקביעת תורים וייעוץ <span>❤</span></p>
 
             <SocialList socials={socials} />
+            <p className="copyrights" dir="ltr">&copy; Built by <a target="_blank" href="https://edenrize.com/">Eden Rize</a></p>
 
             <img className="girl" src="/img/girl-bat.png" />
             <img className="sumo" src="/img/sumo.png" />
