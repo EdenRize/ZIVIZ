@@ -123,7 +123,7 @@ a {
     }
 }
 
-img {
+img:not(.back-arrow) {
     -webkit-user-modify: none;
     -webkit-user-drag: none;
     user-select: none;

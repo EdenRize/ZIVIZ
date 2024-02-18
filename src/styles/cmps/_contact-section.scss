@@ -130,11 +130,16 @@
     .copyrights {
         position: absolute;
         bottom: 0;
+        right: 10px;
         padding-block-end: 10px;
         font-size: 1.1rem;
 
         @include for-mobile-layout {
             font-size: 1.2rem;
+        }
+
+        @include for-narrow-layout {
+            right: unset;
         }
 
         @include for-tablet-layout {
