@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { ImgPreview } from "./ImgPreview"
-import { Image } from "./Image"
 
 export function GalleryList({ imgUrls }) {
     const [previewImg, setPreviewImg] = useState(null)
@@ -14,7 +13,7 @@ export function GalleryList({ imgUrls }) {
                         key={idx}
                         onClick={() => setPreviewImg(imgUrl)}
                     >
-                        <Image src={imgUrl} />
+                        <img src={imgUrl} />
                     </li>
                 })}
             </ul>

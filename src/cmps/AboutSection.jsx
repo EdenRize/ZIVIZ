@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { addVisitedSection, setCurrSection } from "../store/actions/app.actions";
 import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
-import { Image } from "./Image";
 
 export function AboutSection() {
     const router = useNavigate();
@@ -48,7 +47,7 @@ export function AboutSection() {
 
     return (
         <div className={`section even about-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
-            <Image classes={['fish-img']} src="/img/fish.png" />
+            <img className="fish-img" src="/img/fish.png" />
             <p>לפני הקעקוע, חשוב להכיר את הסיפור מאחורי המקעקעת. בואו <a href={`${window.origin}/about`} onClick={onLinkClick}>להכיר אותי</a></p>
         </div>
     );

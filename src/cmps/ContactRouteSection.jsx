@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { addVisitedSection } from "../store/actions/app.actions";
-import { Image } from "./Image";
 
 export function ContactRouteSection() {
     const [isvisited, setIsvisited] = useState(false);
@@ -38,7 +37,7 @@ export function ContactRouteSection() {
 
     return (
         <div className={`section even contact-route-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
-            <Image classes={['horse-img']} src="/img/horse-women.png" />
+            <img className="horse-img" src="/img/horse-women.png" />
             <p>רוצים לשמוע עוד? לקבוע תור לקעקוע או ייעוץ? <span onClick={scrollToBottom}>צרו קשר</span></p>
         </div>
     );

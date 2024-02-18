@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { addVisitedSection, setCurrSection } from "../store/actions/app.actions";
 import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
-import { Image } from "./Image";
 
 export function GallerySection() {
     const router = useNavigate();
@@ -42,7 +41,7 @@ export function GallerySection() {
 
     return (
         <div className={`section gallery-section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''}`} ref={sectionRef}>
-            <Image classes={['women-cry-img']} src="/img/women-cry-sun.png" />
+            <img className="women-cry-img" src="/img/women-cry-sun.png" />
             <p>לעוד פלאשים וסקיצות מבית ZIVIZ, היכנסו ל<a href={`${window.origin}/gallery`} onClick={onLinkClick}>גלריה</a></p>
         </div>
     );
