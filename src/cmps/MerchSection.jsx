@@ -36,7 +36,7 @@ export function MerchSection() {
         <div className={`section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''} flex column align-center justify-center merch-section`} ref={sectionRef}>
 
             <h1 className="ltr"><Logo />'s Merch</h1>
-            <p>Available <a href="https://www.ona.co.il/prd?collection=ziviz&fbclid=PAAaYNx4uKmHhCYjd3D6n_vkJykdNkDC9N_WAiXo34kDnepJ7bYm-kCnT9asE_aem_AaGFiPqPpNMd6aT2LKGvvC-DTLnYH1G66d4-WAxQLdkUwczFYbAByn3rUC1kgc5A6aM&page=2" target="_blank">here</a></p>
+            <p>Available <a rel="noreferrer" href="https://il.ona.co.il/?swoof=1&pa_product-type=%D7%91%D7%99%D7%99%D7%A1%D7%99%D7%A7-%D7%98%D7%99&product_cat=ziviz" target="_blank">here</a></p>
 
             <img className="ziv-2" src="/img/ziv2.jpeg" />
             <img className="ziv-and-men3" src="/img/ziv+men3.jpeg" />
