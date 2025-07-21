@@ -47,12 +47,12 @@ export function ContactSection() {
         },
         {
             imgUrl: '/img/waze.svg',
-            link: utilService.getWazeLink(32.082600773967236, 34.82010336765159),
+            link: utilService.getWazeLink(32.07559430336102, 34.80315066496046),
             name: 'waze'
         },
         {
             imgUrl: '/img/maps.svg',
-            link: utilService.geMapsLink(32.082600773967236, 34.82010336765159),
+            link: utilService.geMapsLink(32.07559430336102, 34.80315066496046),
             name: 'maps'
         },
     ]
@@ -60,7 +60,7 @@ export function ContactSection() {
     return (
         <div className={`section ${isVisible ? 'visible' : ''} ${isvisited ? 'visited' : ''} flex column align-center justify-center contact-section`} ref={sectionRef}>
             <h1><span>בואו</span> נדבר</h1>
-            <p>הסטודיו שלי נמצא <span>בזיתים 11 - רמת גן</span>, אני זמינה לקביעת תורים וייעוץ <span>❤</span></p>
+            <p>הסטודיו שלי נמצא <span>כצנלסון 15 - גבעתיים</span>, אני זמינה לקביעת תורים וייעוץ <span>❤</span></p>
 
             <SocialList socials={socials} />
             <p className="copyrights" dir="ltr">&copy; Built by <a target="_blank" href="https://edenrize.com/">Eden Rize</a></p>
